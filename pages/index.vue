@@ -1,9 +1,9 @@
 <template>
-    <div class="p-8 bg-blue-900">
-        <h1 class= "text-4xl font-bold text-blue-500">{{name}}</h1>
+    <div class="p-8 bg-dark-bg">
+        <h1 class= "text-primary font-serif">{{name}}</h1>
 
-        <p class="text-sm text-gray-500">{{description}}</p>
-
+        <p class="text-secondary">{{description}}</p>
+ 
 
     </div>
 </template>
