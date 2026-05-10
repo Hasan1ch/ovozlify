@@ -11,7 +11,6 @@
 
 <script setup>
 import { ref } from 'vue';
- 
 
  const name = ref('Ovozlify')
  const description = ref('Pdf to Audiobook')
@@ -22,5 +21,9 @@ const logout = async()=>{
 
     navigateTo('/login')
 }
+
+ definePageMeta ({
+    middleware: 'auth'
+ })
 
 </script>
