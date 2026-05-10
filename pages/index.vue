@@ -6,12 +6,21 @@
  
 
     </div>
+    <button @click="logout" type="submit">Logout</button>
 </template>
 
 <script setup>
 import { ref } from 'vue';
  
+
  const name = ref('Ovozlify')
  const description = ref('Pdf to Audiobook')
+ const supabase = useSupabaseClient()    
+
+const logout = async()=>{
+    await supabase.auth.signOut()
+
+    navigateTo('/login')
+}
 
 </script>
