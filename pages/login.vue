@@ -12,6 +12,10 @@
 <script setup>
 import {ref} from 'vue'
 
+definePageMeta({
+    layout : false
+})
+
 const email = ref('')
 const password = ref('')
 const supabase = useSupabaseClient()

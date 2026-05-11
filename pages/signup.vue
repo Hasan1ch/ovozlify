@@ -26,6 +26,10 @@ const confirmPassword = ref('')
 const supabase = useSupabaseClient()
 const errorMessage = ref("error happened")
 
+definePageMeta({
+    layout : false
+})
+
 async function signUp(){
 
     const {error} = await supabase.auth.signUp({
@@ -38,6 +42,7 @@ async function signUp(){
         navigateTo('/')
     }
 }
+
 
 </script>
 
