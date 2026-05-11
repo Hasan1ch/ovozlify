@@ -1,18 +1,18 @@
 <template>
 <form @submit.prevent="signUp">
-    <div>
-        <h1>Sign UP</h1>
-            <label for="">
+    <div class="flex flex-col justify-center items-left min-h-screen">
+        <h1 class="text-primary text-5xl">Sign up</h1>
+            <label class="text-primary text-xl m-4" for="">
             <input v-model="email" type="text" name="email" id="">Email </label>
 
-            <label for="">
+            <label class="text-primary text-xl m-4" for="">
             <input v-model="password" type="password" name="password" id="">Password
             </label>
             
-            <label for="">
+            <label class="text-primary text-xl m-4" for="">
             <input v-model="confirmPassword" type="password" name="confirm password" id="">Confirm password
            </label> 
-           <button type="submit">Submit</button>
+           <button class="text-primary border rounded-3xl p-4"type="submit">Submit</button>
     </div>
 </form>
 </template>
@@ -42,7 +42,6 @@ async function signUp(){
         navigateTo('/')
     }
 }
-
 
 </script>
 
