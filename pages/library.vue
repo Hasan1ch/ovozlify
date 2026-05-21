@@ -36,7 +36,10 @@ async function uploadFile(){
     const response = await fetch ('/api/upload', {
         method: 'POST',
         body: formData
+        
     })
+        const result = await response.json()
+        console.log(result)
     }catch(error){
         console.log(error)
     }
