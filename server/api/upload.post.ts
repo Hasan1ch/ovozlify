@@ -2,10 +2,9 @@
 export default defineEventHandler(async(event)=>{
     const response = await readMultipartFormData(event)
     if (!response) throw createError({ statusCode: 400, message: 'Tekst oshibki' })
-
-    const name = response.find(part=>part.filename)
-    if (!name)throw createError({statusCode:400, message:'Tekst oshibki'})
-    const size = name.data.length
+    const file = response.find(part=>part.filename)
+    if (!file)throw createError({statusCode:400, message:'Tekst oshibki'})
+    const size = file.data.length
     if (!size)throw createError({statusCode:400, message:'Tekst oshibki '})
-    return {name:name.filename, size:size}
+    return {name:file.filename, size:size}
 })
