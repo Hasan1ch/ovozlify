@@ -42,7 +42,7 @@ async function signUp(){
         navigateTo('/')
     }
 }
-
+//Comment
 </script>
 
 <style></style>
